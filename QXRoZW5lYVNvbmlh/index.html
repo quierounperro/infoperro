@@ -9,142 +9,124 @@
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f2f4f8;
-      color: #333;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.5;
     }
 
-    .container {
-      max-width: 420px;
-      margin: auto;
-      padding: 16px;
+    .page {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 24px 16px;
     }
 
     .card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
-
-    .header {
-      background: #ff6b6b;
-      color: white;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .header h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-
-    .alert {
-      background: #ffe3e3;
-      color: #c92a2a;
-      padding: 12px;
-      text-align: center;
-      font-weight: bold;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 24px;
     }
 
     .photo {
-      width: 100%;
-      height: 250px;
-      background: #ddd;
-      background-size: cover;
-      background-position: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 16px;
+      border: 1px solid #ddd;
     }
 
-    .content {
-      padding: 16px;
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin: 6px 0 24px;
+      font-size: 15px;
     }
 
     .section {
-      margin-bottom: 14px;
+      border-top: 1px solid #eee;
+      padding: 16px 0;
+    }
+
+    .section:first-of-type {
+      border-top: 0;
     }
 
     .label {
-      font-weight: bold;
       display: block;
-      margin-bottom: 4px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #111;
     }
 
-    .btn {
-      display: block;
-      text-align: center;
+    .text {
+      color: #444;
+      margin: 0;
+    }
+
+    .notice {
+      margin-top: 20px;
       padding: 14px;
-      margin-top: 10px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .owner {
-      background: #339af0;
-    }
-
-    .vet {
-      background: #51cf66;
+      background: #f1f1f1;
+      border-radius: 8px;
+      color: #333;
+      font-size: 14px;
     }
 
     .footer {
       text-align: center;
-      font-size: 12px;
-      color: #888;
-      margin-top: 10px;
+      margin-top: 16px;
+      color: #777;
+      font-size: 13px;
     }
   </style>
 </head>
+
 <body>
+  <main class="page">
+    <section class="card">
 
-<div class="container">
-  <div class="card">
+      <img class="photo" src="ate.png" alt="Foto de Athenea">
 
-    <div class="header">
-      <h1>🐶 Athenea</h1>
-    </div>
-
-    <div class="alert">
-      ⚠️ PERRO PERDIDO – POR FAVOR AYUDA
-    </div>
-
-    <!-- FOTO (pon aquí la URL de tu imagen) -->
-    <div class="photo" style="background-image: url('https://via.placeholder.com/400x250');"></div>
-
-    <div class="content">
+      <h1>Athenea</h1>
+      <p class="subtitle">Ficha de información del perro</p>
 
       <div class="section">
-        <span class="label">🧠 Comportamiento</span>
-        Tranquila, pero puede asustarse con desconocidos
+        <span class="label">Comportamiento</span>
+        <p class="text">Tranquila, pero puede asustarse con desconocidos.</p>
       </div>
 
       <div class="section">
-        <span class="label">🚪 Escapista</span>
-        Sí
+        <span class="label">Escapista</span>
+        <p class="text">Sí. Tener cuidado al abrir puertas o portales.</p>
       </div>
 
       <div class="section">
-        <span class="label">🍽️ Alimentación / alergias</span>
-        No darle pollo (alergia)
+        <span class="label">Alimentación / alergias</span>
+        <p class="text">No darle pollo. Alergia conocida.</p>
       </div>
 
-      <a class="btn owner" href="tel:+34123456789">
-        📞 Llamar al dueño
-      </a>
+      <div class="section">
+        <span class="label">Veterinario</span>
+        <p class="text">Clínica veterinaria habitual indicada por el dueño.</p>
+      </div>
 
-      <a class="btn vet" href="tel:+34987654321">
-        🏥 Llamar al veterinario
-      </a>
+      <div class="notice">
+        Si has encontrado a Athenea, por favor revisa la chapa del collar para contactar con su dueño.
+      </div>
 
-    </div>
-  </div>
+    </section>
 
-  <div class="footer">
-    Gracias por ayudar 🐾
-  </div>
-</div>
-
+    <p class="footer">Gracias por ayudar.</p>
+  </main>
 </body>
 </html>
